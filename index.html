@@ -21,26 +21,94 @@
 	</section>
 
 	<section class="slide">
-		<h2>Using</h2>
-		<ol>
-			<li><code>.header {/*...*/};</code></li>
-			<li class="next"><code>import styles from './App.css';</code></li>
-			<li class="next"><code>`&lt;div class="styles.app"&gt;&lt;/div&gt;`</code></li>
-			<li class="next"><code>&lt;div class="App__header--hwRc6"&gt;&lt;/div&gt;</code></li>
-			<li class="next"><code>&lt;div class="hwRc6f9WKlpNo0-FJMnLB"&gt;&lt;/div&gt;</code></li>
-		</ol>
+		<h2>Dev Configuration</h2>
+		<pre>
+			<code>{</code>
+			<code>	test: /\.css$/,</code>
+			<code>	use: [</code>
+			<code>		{</code>
+			<code>			loader: 'css-loader',</code>
+			<code>			options: {</code>
+			<code>				<mark>modules: true,</mark></code>
+			<code>				<mark>localIdentName: '[name]__[local]--[hash:base64:5]',</mark></code>
+			<code>				...</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	]</code>
+			<code>}</code>
+		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>Prod Configuration</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>{</code>
+			<code>	test: /\.css$/,</code>
+			<code>	use: [</code>
+			<code>		{</code>
+			<code>			loader: 'css-loader',</code>
+			<code>			options: {</code>
+			<code>				<mark>modules: true,</mark></code>
+			<code>				...</code>
+			<code>			}</code>
+			<code>		}</code>
+			<code>	]</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Using</h2>
+		<div><code>App.css</code></div>
+		<pre>
+			<code>.app  { /* ... */ }</code>
+			<code> </code>
+			<code>.header  { /* ... */ }</code>
+			<code> </code>
+			<code>.content { /* ... */ }</code>
+			<code> </code>
+			<code>.footer { /* ... */ }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Using</h2>
+		<div><code>App.js</code></div>
+		<pre>
+			<code>import React from 'react';</code>
+			<code>import <mark>styles</mark> from './App.css';</code>
+			<code> </code>
+			<code>const App = () => (</code>
+			<code>	&lt;div className="<mark>${styles.app}</mark>"&gt;</code>
+			<code>		&lt;div className="<mark>${styles.header}</mark>"&gt;&lt;/div&gt;</code>
+			<code>		&lt;div className="<mark>${styles.content}</mark>"&gt;&lt;/div&gt;</code>
+			<code>		&lt;div className="<mark>${styles.footer}</mark>"&gt;&lt;/div&gt;</code>
+			<code>	&lt;/div&gt;</code>
+			<code>);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Using</h2>
+		<div><code>Dev</code></div>
+		<pre>
+			<code>&lt;div class="App__app--NghkZ"&gt;</code>
+			<code>	&lt;div class="App__header--1dzYQ"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="App__content--1hxOD"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="App__footer--1dzYQ"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Using</h2>
+		<div><code>Prod</code></div>
+		<pre>
+			<code>&lt;div class="NghkZ4oYFr3noleiCV5cu"&gt;</code>
+			<code>	&lt;div class="hwRc6f9WKlpNo0-FJMnLB"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="_3CJMUhmk5S6iMYdDFWvuA-"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="jrOXxo5ePDyXJpxqVgSmZ"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
 		</pre>
 	</section>
 

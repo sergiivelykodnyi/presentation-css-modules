@@ -9,6 +9,10 @@
     width: 1px;
 }
 
+.slide {
+	font-size: 18px;
+}
+
 #cover {
 	text-align: center;
 }
