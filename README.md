@@ -1,2 +1,4 @@
-# presentation-css-modules
-Introduction to CSS Modules
+# Introduction to CSS Modules
+
+---
+Licensed under [MIT License](LICENSE.md).
