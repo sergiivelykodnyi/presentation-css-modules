@@ -21,7 +21,41 @@
 	</section>
 
 	<section class="slide">
+		<h2>What does it mean?</h2>
+		<figure>
+			<blockquote>
+				<p>A <b>CSS Module</b> is a CSS file in which all class names and animation names are scoped locally by default.</p>
+			</blockquote>
+			<figcaption>The explanation from the official repository.</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Why?</h2>
+	</section>
+
+	<section class="slide">
+		<h2>BEM</h2>
+		<p><code>[block]__[element]--[modifier]</code></p>
+		<pre class="next">
+			<code>&lt;div class="app app--modifier"&gt;</code>
+			<code>	&lt;div class="app__header app__header--sticky"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="app__content"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="app__footer"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+		<pre class="next">
+			<code>&lt;div class="some-beautiful-block some-beautiful-block--modifier"&gt;</code>
+			<code>	&lt;div class="some-beautiful-block__header header header--sticky"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="some-beautiful-block__content content content--modifier"&gt;&lt;/div&gt;</code>
+			<code>	&lt;div class="some-beautiful-block__footer footer footer--modifier"&gt;&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
 		<h2>Dev Configuration</h2>
+		<div><code>webpack.config.dev.js</code></div>
 		<pre>
 			<code>{</code>
 			<code>	test: /\.css$/,</code>
@@ -41,6 +75,7 @@
 
 	<section class="slide">
 		<h2>Prod Configuration</h2>
+		<div><code>webpack.config.prod.js</code></div>
 		<pre>
 			<code>{</code>
 			<code>	test: /\.css$/,</code>
