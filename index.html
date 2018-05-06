@@ -54,8 +54,8 @@
 	</section>
 
 	<section class="slide">
-		<h2>Dev Configuration</h2>
-		<div><code>webpack.config.dev.js</code></div>
+		<h2>Configuration</h2>
+		<div><code>webpack.config.js</code></div>
 		<pre>
 			<code>{</code>
 			<code>	test: /\.css$/,</code>
@@ -64,26 +64,7 @@
 			<code>			loader: 'css-loader',</code>
 			<code>			options: {</code>
 			<code>				<mark>modules: true,</mark></code>
-			<code>				<mark>localIdentName: '[name]__[local]--[hash:base64:5]',</mark></code>
-			<code>				...</code>
-			<code>			}</code>
-			<code>		}</code>
-			<code>	]</code>
-			<code>}</code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Prod Configuration</h2>
-		<div><code>webpack.config.prod.js</code></div>
-		<pre>
-			<code>{</code>
-			<code>	test: /\.css$/,</code>
-			<code>	use: [</code>
-			<code>		{</code>
-			<code>			loader: 'css-loader',</code>
-			<code>			options: {</code>
-			<code>				<mark>modules: true,</mark></code>
+			<code class="next">				<mark>localIdentName: '[name]__[local]--[hash:base64:5]',</mark></code>
 			<code>				...</code>
 			<code>			}</code>
 			<code>		}</code>
